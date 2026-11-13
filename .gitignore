@@ -1,0 +1,6 @@
+node_modules/
+.orca/
+.superpowers/
+.env
+.env.*
+*.log

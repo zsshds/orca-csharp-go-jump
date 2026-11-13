@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>C# / Go Editor</title><link rel="stylesheet" href="./style.css"></head>
+<body>
+<header>
+<label for="language">Syntax</label><select id="language"><option value="csharp">C#</option><option value="go">Go</option></select>
+<button id="setup">Bind file</button><button id="reconnect">Reconnect</button>
+<button data-nav="definition">Definition (F12)</button><button data-nav="typeDefinition">Type</button><button data-nav="implementation">Implementation</button><button data-nav="references">References</button>
+<button id="back">Back</button><button id="forward">Forward</button>
+</header>
+<section id="binding" hidden>
+<p>Orca does not provide a trusted document path. Explicitly select the workspace, file and project for this editor. Matching content does not establish identity.</p>
+<label>Workspace <select id="workspace"><option value="">Select a workspace</option></select></label>
+<label>File type <select id="extension"><option value=".cs">C# (.cs)</option><option value=".go">Go (.go)</option></select></label>
+<button id="scan">Scan</button><span id="scan-status"></span>
+<label>File <select id="file"><option value="">Select a file</option></select></label><button id="find-projects">Find projects</button>
+<label>Project <select id="project"><option value="">Select a project</option></select></label><button id="attach">Confirm binding</button>
+</section>
+<section id="handoffs" hidden><label>Pending navigation <select id="handoff-list"><option value="">Select a navigation</option></select></label><button id="claim-handoff">Go to selected location</button></section>
+<section id="conflicts" hidden role="alert"><strong>External conflict: the outside version was retained. Your local drafts are below; copy or save them before closing this editor. They are kept only in this panel.</strong><div id="conflict-drafts"></div></section>
+<div id="status" role="status"></div>
+<section id="results" hidden><label>Filter results <input id="filter" type="search"></label><select id="result-list" size="5" aria-label="Navigation results"></select><pre id="preview"></pre><button id="open-result">Open selected result</button></section>
+<main id="editor" aria-label="Code editor"></main><div id="error" role="alert"></div>
+<script type="module" src="./editor.js"></script>
+</body></html>

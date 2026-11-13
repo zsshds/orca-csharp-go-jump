@@ -1,0 +1,23 @@
+{
+  "manifestVersion": 2,
+  "id": "csharp-go-editor",
+  "name": "C# and Go Editor",
+  "version": "0.1.0",
+  "description": "Orca C# and Go editor baseline.",
+  "engines": { "orca": ">=1.4.248" },
+  "execution": "trusted-worker",
+  "pluginApi": 1,
+  "main": "dist/worker.mjs",
+  "capabilities": [{ "kind": "settings:own" }, { "kind": "workspace:read" }],
+  "contributes": {
+    "customEditors": [{
+      "id": "code-editor", "title": "C# / Go Editor", "extensions": [".cs", ".go"],
+      "entry": "dist/editor.html", "priority": "default", "frame": "isolated"
+    }],
+    "settings": [
+      { "key": "csharpServerPath", "title": "C# language server path", "description": "Empty uses PATH.", "type": "string", "default": "" },
+      { "key": "goServerPath", "title": "Go language server path", "description": "Empty uses PATH.", "type": "string", "default": "" }
+    ]
+  },
+  "license": "MIT"
+}

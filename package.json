@@ -1,0 +1,29 @@
+{
+  "name": "orca-csharp-go-editor",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "license": "MIT",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "typecheck": "node node_modules/typescript/bin/tsc -p .",
+    "test": "node scripts/test.mjs"
+  },
+  "dependencies": {
+    "@codemirror/commands": "6.10.0",
+    "@codemirror/lang-go": "6.0.1",
+    "@codemirror/language": "6.11.3",
+    "@codemirror/search": "6.5.11",
+    "@codemirror/state": "6.5.2",
+    "@codemirror/view": "6.38.6",
+    "@replit/codemirror-lang-csharp": "6.2.0",
+    "codemirror": "6.0.2",
+    "vscode-jsonrpc": "8.2.1"
+  },
+  "devDependencies": {
+    "@types/node": "24.10.1",
+    "esbuild": "0.25.12",
+    "tsx": "4.20.6",
+    "typescript": "5.9.3"
+  }
+}

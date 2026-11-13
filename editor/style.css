@@ -1,0 +1,21 @@
+html, body { height: 100%; margin: 0; }
+body { display: flex; flex-direction: column; color: var(--orca-foreground, #ddd); background: var(--orca-background, #222); font: 13px system-ui, sans-serif; }
+header { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; padding: 6px 10px; }
+section { padding: 8px 10px; }
+section[hidden] { display: none; }
+section label { display: inline-flex; gap: 4px; margin: 4px; }
+#results { display: flex; flex-wrap: wrap; gap: 8px; max-height: 35%; overflow: auto; }
+#result-list { min-width: 220px; max-width: 50%; }
+#preview { white-space: pre-wrap; overflow: auto; max-height: 10em; margin: 0; }
+#status:not(:empty) { padding: 4px 10px; }
+select { color: inherit; background: var(--orca-card, #333); }
+main { flex: 1; min-height: 0; }
+.cm-editor { height: 100%; }
+.cm-scroller { overflow: auto; font-family: monospace; }
+.cm-editor .cm-cursor { border-left-color: #fff !important; }
+.cm-editor .cm-selectionBackground, .cm-editor.cm-focused .cm-selectionBackground { background-color: #456b9a !important; }
+.cm-editor .cm-content { caret-color: #fff !important; }
+html.light .cm-editor .cm-cursor { border-left-color: #111 !important; }
+html.light .cm-editor .cm-content { caret-color: #111 !important; }
+html.light .cm-editor .cm-selectionBackground, html.light .cm-editor.cm-focused .cm-selectionBackground { background-color: #a9c9ed !important; }
+#error:not(:empty) { padding: 8px; color: #e65; }
